@@ -117,27 +117,3 @@ class PEELSorter:
 
 
 
-
-
-
-
-"""
-nameInput
-numberInput
-
-pointButton
-explainButton
-evaluateButton
-linkButton
-
-full-referenceinput
-urlInput
-
-expandInput
-toInput
-fromInput
-notesInput
-connectTextInput
-
-submitEntryButton
-"""
