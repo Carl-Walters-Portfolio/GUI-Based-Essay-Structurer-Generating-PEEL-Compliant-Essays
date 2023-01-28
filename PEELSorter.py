@@ -10,13 +10,16 @@ class PEELSorter:
     currentFile = "file1"
     
     def PEELFile(self):
+        """
+        Create and save an empty PEEL json file 
+        """
         data = self.model.createEmptyPeel()
         self.file.createJsonfile("file1", data)
 
-    def sortPEEL(self, aEntry):
-        pass
-
     def append(self):
+        """
+        Save new PEEL entry in the Json file.
+        """
         aEntry = self.model.createEmptyEntry()
         aEntry["name"] = "new title"
         data = self.file.readJsonFile(self.currentFile)
@@ -27,6 +30,9 @@ class PEELSorter:
         d = json.dumps(data, indent=4, separators=(',', ': '), sort_keys=True)
         
     def toText(self):
+        """
+        Create a text file that contains every single entry in order of PEEL corresponding to the individual numbers.
+        """
         #data = self.getData(self.currentFile)
         data = self.file.readJsonFile("file1")
 
@@ -98,6 +104,9 @@ class PEELSorter:
         #self.file.createTextFile("complete", text)
 
     def countEntries(self):
+        """
+        established total number of entries
+        """
         data = self.file.readJsonFile("file1")
 
         count = 0
